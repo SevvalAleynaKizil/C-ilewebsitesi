@@ -1,0 +1,40 @@
+﻿
+<div class="container">
+    <a href="/Admin/Hizmet/Insert" class="btn btn-primary" style="margin-bottom:15px">Yeni Hizmet Ekle</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Hizmet Fotoğrafı</td>
+                <td>Hizmet İkonu</td>
+                <td>Hizmet Adı</td>
+                <td>Hizmet Açıklaması</td>
+                <td>Yapılan Hizmetler</td>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td style="text-align:center"><img src="/images/@item.Images"  width="50"/></td>
+                    <td style="text-align:center"><img src="/images/@item.Icon"  width="50"/></td>
+                    <td>@item.Ministrationname</td>
+                    <td>@item.Ministrationdescription</td>
+                    <td>@item.Ministrationprovided</td>
+
+                    <td>
+                        <a href="/admin/Hizmet/Update/@item.Id" class="btn btn-primary">Güncelle</a>
+                        <a href="/admin/Hizmet/Delete/@item.Id" class="btn btn-success">Sil</a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>

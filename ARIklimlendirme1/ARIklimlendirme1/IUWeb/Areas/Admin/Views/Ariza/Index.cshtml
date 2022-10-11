@@ -1,0 +1,38 @@
+﻿
+<div class="container">
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Adı</td>
+                <td>Soyadı</td>
+                <td>Numara</td>
+                <td>Tarih</td>
+
+
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Surname</td>
+                    <td>@item.Phone</td>
+                    <td>@item.dateTime.ToString("dd-MM-yyyy")</td>
+                    <td>
+                        <a href="/Admin/Ariza/delete/@item.Id" class="btn btn-success">Sil</a>
+                    </td>
+                    <td>
+                        <a href="/Admin/Ariza/Details/@item.Id" class="btn btn-success">İncele</a>
+                    </td>
+
+                </tr>
+
+            }
+        </tbody>
+    </table>
+</div>
+

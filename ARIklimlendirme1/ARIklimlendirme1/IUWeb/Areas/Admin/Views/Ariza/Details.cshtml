@@ -1,0 +1,23 @@
+﻿
+<div class="container">
+
+    <table class="table table-bordered">
+        <thead>
+            @foreach (var item in Model)
+            {
+            <tr> <td style="width:150px; border:2px; color:#cf240a; font-weight:700;"># <td>@item.Id</td></td></tr>
+            <tr> <td style="color:#cf240a; font-weight:700;">Adı: <td> @item.Name </td></td></tr>
+            <tr>  <td style="color:#cf240a;font-weight:700;">Soyadı: <td>@item.Surname </td></td></tr>
+            <tr>  <td style="color:#cf240a;font-weight:700;">Numara: <td>@item.Phone </td></td></tr>
+            <tr> <td style="color:#cf240a;font-weight:700;">Adres: <td>@item.Address </td></td></tr>
+            <tr>  <td style="color:#cf240a;font-weight:700;">Mail: <td>@item.Mail</td></td></tr>
+            <tr>  <td style="color:#cf240a;font-weight:700;">Arıza Detayı: <td>@item.Faultdetail</td></td></tr>
+            <tr> <td style="color:#cf240a;font-weight:700;">Tarih:<td> @item.dateTime.ToString("dd-MM-yyyy")</td></td></tr>
+            }
+
+        </tr>
+        </thead>
+
+    </table>
+</div>
+

@@ -1,0 +1,17 @@
+﻿@model DataAccsess.Models.Users
+
+<div class="container">
+    <form action="/admin/Kullanici/Insert" method="post" >
+    <input type="text" class="form-control" style="margin-bottom:10px;" placeholder="Kullanıcı Adı" asp-for="Username"/>
+    <input type="password" class="form-control" style="margin-bottom:10px;" placeholder="Şifre" asp-for="Password"/>
+
+    <button type="submit" class="form-control btn btn-primary">Ekleme Yap</button>
+
+    </form>
+
+@if(ViewBag.Message != null)
+{
+    <div class="alert alert-success" style="margin-top:15px">@ViewBag.Message</div>
+
+}
+</div>

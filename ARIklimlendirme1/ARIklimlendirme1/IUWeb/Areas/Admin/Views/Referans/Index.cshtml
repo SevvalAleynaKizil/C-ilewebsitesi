@@ -1,0 +1,33 @@
+﻿
+<div class="container">
+    <a href="/Admin/Referans/Insert" class="btn btn-primary" style="margin-bottom:15px">Yeni Referans Ekle</a>
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <td>#</td>
+                <td>Referans Fotoğrafı</td>
+                <td>Referans Adı</td>
+            </tr>
+
+        </thead>
+
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td style="text-align:center"><img src="/images/@item.Referanceimages"  width="50"/></td>
+                    <td>@item.ReferanceName</td>
+                    <td>
+                        <a href="/admin/Referans/Update/@item.Id" class="btn btn-primary">Güncelle</a>
+                        <a href="/admin/Referans/Delete/@item.Id" class="btn btn-success">Sil</a>
+
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+
+    </table>
+</div>

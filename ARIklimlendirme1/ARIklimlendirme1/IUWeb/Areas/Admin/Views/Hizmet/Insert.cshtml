@@ -1,0 +1,22 @@
+﻿@model DataAccsess.Models.Ministration
+
+<div class="container">
+    <form action="/Admin/Hizmet/Insert" method="post" enctype="multipart/form-data">
+    <input type="file" class="form-control" style="margin-bottom:10px;" name="file"/>
+    <input type="file" class="form-control" style="margin-bottom:10px;" name="Icon"/>
+    <input type="text" class="form-control" style="margin-bottom:10px;" placeholder="Hizmet Adı" asp-for="Ministrationname"/>
+    <input type="text" class="form-control" style="margin-bottom:10px;" placeholder="Hizmet Açıklaması" asp-for="Ministrationdescription"/>
+     <textarea type="text" class="form-control" style="margin-bottom:10px;height:150px" placeholder="Yapılan hizmetler" asp-for="Ministrationprovided"></textarea> 
+    <button type="submit" class="form-control btn btn-primary">Ekleme Yap</button>
+    </form>
+</div>
+
+@if(ViewBag.Message != null)
+{
+    <div class="alert alert-success" style="margin-top:15px">@ViewBag.Message</div>
+
+}
+@if(ViewBag.Error != null )
+{
+    <div class="alert alert-danger" style="margin-top:15px">@ViewBag.Error</div>
+}
